@@ -15,10 +15,10 @@ export const config = {
     // 所在城市
     city: "太原",
     // 生日，修改名字为对应需要显示的名字，如果生日为农历， type为 r
-    //birthdays: [
-      //{"name": "老婆", "year": "1993", "date": "12-27", "type": 'new'},
+    birthdays: [
+      {"name": "卢鹏", "year": "1998", "date": "07-26", "type": 'new'},
       //{"name": "家公", "year": "1993", "date": "08-09", "type": 'new'},
-    //],
+    ],
     // 在一起的日子，格式同上
     //loveDate: "2015-05-01",
     // 结婚纪念日
