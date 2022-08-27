@@ -104,33 +104,6 @@ import dayjs from 'dayjs'
 }
 
 /**
- * 获取生日信息
- * @returns 
- */
- export const getBirthdayMessage = () => {
-    // 计算生日倒数
-    const birthdayList = config.birthdays
-    let resMessage = ''
-    birthdayList.forEach(birthday => {
-        let birthdayMessage = null
-        // 获取距离下次生日的时间
-        const nextBir = dayjs(dayjs().format('YYYY') + '-' + birthday.date).diff(dayjs(), 'day')
-        
-        if (nextBir === 0) {
-            birthdayMessage = `今天是 ${birthday.name} 生日哦，祝${birthday.name}生日快乐！`
-        } else if (nextBir > 0 ) {
-            birthdayMessage = `距离 ${birthday.name} 的生日还有${nextBir}天`
-        }
-        // 存储数据
-        if (birthdayMessage) {
-            resMessage += `${birthdayMessage} \n`
-        }
-    })
-
-    return resMessage
-}
-
-/**
  * 发送消息模板
  * @param {*} accessToken 
  * @param {*} user 
